@@ -86,13 +86,13 @@ mod tests {
     async fn it_should_return_location_redirect_for_mock() {
         let server = TestServer::builder().mock_transport().build(app());
         let location = server.get("/location").await.header("location");
-        assert_eq!(location, "/testing");
+        assert_eq!(location, "/login");
     }
 
     #[tokio::test]
     async fn it_should_return_location_redirect_for_http() {
         let server = TestServer::builder().http_transport().build(app());
         let location = server.get("/location").await.header("location");
-        assert_eq!(location, "/testing");
+        assert_eq!(location, "/login");
     }
 }
