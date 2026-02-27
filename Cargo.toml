@@ -1,0 +1,13 @@
+[package]
+name = "axum-test-bug"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+axum = { version = "0.8.8", features = ["macros"] }
+axum-login = "0.18.0"
+tokio = { version = "1.49.0", features = ["macros", "rt-multi-thread"] }
+tower-sessions = { version = "0.14.0", features = ["memory-store"] }
+
+[dev-dependencies]
+axum-test = "19.0.0"
